@@ -218,7 +218,8 @@ class SpecialIsekaiEditorDelete extends SpecialPage {
 
 	private function submitDelete( Title $title ): void {
 		$request = $this->getRequest();
-		if ( !$this->getUser()->matchEditToken(
+		
+		if ( !$this->getContext()->getCsrfTokenSet()->matchToken(
 			$request->getVal( 'wpEditToken' ),
 			[ 'delete', $title->getPrefixedText() ]
 		) ) {
@@ -245,8 +246,12 @@ class SpecialIsekaiEditorDelete extends SpecialPage {
 			->deleteIfAllowed( $request->getText( 'wpReason' ) );
 
 		if ( !$status->isOK() ) {
+			$statusFormatter = $services->getFormatterFactory()
+				->getStatusFormatter( $this->getContext() );
 			$this->getOutput()->addWikiTextAsInterface(
-				Status::wrap( $status )->getWikiText( false, false, $this->getLanguage() )
+				$statusFormatter->getWikiText( $status, [
+					'lang' => $this->getLanguage() 
+				] )
 			);
 			$this->showConfirmForm( $title );
 			return;
