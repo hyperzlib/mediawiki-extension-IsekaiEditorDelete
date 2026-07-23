@@ -7,7 +7,8 @@ return [
 	'IsekaiEditorDelete.Store' => static function ( MediaWikiServices $services ) {
 		return new EditorDeleteStore(
 			$services->getDBLoadBalancer(),
-			$services->getActorNormalization()
+			$services->getActorNormalization(),
+			$services->getMainWANObjectCache()
 		);
 	},
 ];
