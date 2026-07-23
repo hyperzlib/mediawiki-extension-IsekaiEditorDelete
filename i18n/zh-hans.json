@@ -8,7 +8,7 @@
 	"isekai-editor-delete-desc": "添加由 PageACL 控制的删除、删除日志标签，以及面向历史编者的已删内容查看。",
 	"isekaieditordelete": "删除页面",
 	"isekai-editor-delete-special-title": "删除页面：$1",
-	"isekai-editor-delete-toolbox-editor-delete": "删除",
+	"isekai-editor-delete-toolbox-editor-delete": "删除（作为编者）",
 	"isekai-editor-delete-toolbox-delete": "删除",
 	"isekai-editor-delete-confirm": "删除此页面。",
 	"isekai-editor-delete-editor-history-notice": "参与过编辑的用户仍能查看页面历史内容。",

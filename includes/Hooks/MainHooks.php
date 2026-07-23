@@ -84,12 +84,14 @@ class MainHooks implements
 		}
 
 		$hasCoreDelete = $sktemplate->getAuthority()->probablyCan( 'delete', $title );
+		
 		$links['actions']['isekai-editor-delete'] = [
 			'icon' => 'trash',
 			'text' => $sktemplate->msg(
 				$hasCoreDelete ? 'isekai-editor-delete-toolbox-editor-delete' : 'isekai-editor-delete-toolbox-delete'
 			)->text(),
 			'href' => $this->getSpecialTitle( $title )->getLocalURL(),
+			'accessKey' => $hasCoreDelete ? null : 'd',
 		];
 	}
 

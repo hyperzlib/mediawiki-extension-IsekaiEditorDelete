@@ -8,7 +8,7 @@
 	"isekai-editor-delete-desc": "Adds PageACL-controlled deletion with tagged delete logs and deleted-content access for archived page editors.",
 	"isekaieditordelete": "Delete page",
 	"isekai-editor-delete-special-title": "Delete page: $1",
-	"isekai-editor-delete-toolbox-editor-delete": "Delete",
+	"isekai-editor-delete-toolbox-editor-delete": "Delete (As editor)",
 	"isekai-editor-delete-toolbox-delete": "Delete",
 	"isekai-editor-delete-confirm": "Delete this page.",
 	"isekai-editor-delete-editor-history-notice": "Users who have participated in editing can still view the page history content.",
