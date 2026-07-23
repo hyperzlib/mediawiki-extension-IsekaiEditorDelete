@@ -1,0 +1,84 @@
+{
+	"name": "IsekaiEditorDelete",
+	"namemsg": "isekai-editor-delete",
+	"author": "Hyperzlib",
+	"version": "0.1.0",
+	"descriptionmsg": "isekai-editor-delete-desc",
+	"license-name": "MIT",
+	"type": "specialpage",
+	"requires": {
+		"MediaWiki": ">= 1.43.0",
+		"extensions": {
+			"IsekaiLitePageACL": "*"
+		}
+	},
+	"MessagesDirs": {
+		"IsekaiEditorDelete": [
+			"i18n"
+		]
+	},
+	"AutoloadNamespaces": {
+		"Isekai\\EditorDelete\\": "includes"
+	},
+	"HookHandlers": {
+		"main": {
+			"class": "Isekai\\EditorDelete\\Hooks\\MainHooks",
+			"services": [
+				"IsekaiEditorDelete.Store",
+				"DBLoadBalancer",
+				"ActorNormalization",
+				"ActionFactory",
+				"TitleFactory"
+			]
+		},
+		"updater": {
+			"class": "Isekai\\EditorDelete\\Hooks\\UpdaterHooks"
+		}
+	},
+	"Hooks": {
+		"LoadExtensionSchemaUpdates": "updater",
+		"PageDeleteComplete": "main",
+		"SidebarBeforeOutput": "main",
+		"SkinTemplateNavigation::Universal": "main",
+		"UserGetRights": "main",
+		"ChangeTagsAllowedAdd": "main",
+		"ChangeTagsListActive": "main"
+	},
+	"SpecialPages": {
+		"IsekaiEditorDelete": "Isekai\\EditorDelete\\SpecialPage\\SpecialIsekaiEditorDelete"
+	},
+	"ServiceWiringFiles": [
+		"IsekaiEditorDelete.services.php"
+	],
+	"attributes": {
+		"IsekaiLitePageACL": {
+			"Permissions": {
+				"editor-delete": {
+					"label": "isekai-editor-delete-permission-delete",
+					"help": "isekai-editor-delete-permission-delete-help",
+					"sort": 400,
+					"page_creator_grantable": true,
+					"admin_grantable": true,
+					"default_grants": {
+						"creator": true,
+						"user": false
+					},
+					"implies": []
+				},
+				"editor-delete-subpage": {
+					"label": "isekai-editor-delete-permission-delete-subpage",
+					"help": "isekai-editor-delete-permission-delete-subpage-help",
+					"sort": 410,
+					"page_creator_grantable": true,
+					"admin_grantable": true,
+					"default_grants": {
+						"creator": true,
+						"user": false
+					},
+					"implies": []
+				}
+			}
+		}
+	},
+	"manifest_version": 2
+}

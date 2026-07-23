@@ -1,0 +1,31 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hyperzlib"
+		]
+	},
+	"isekai-editor-delete": "Delete",
+	"isekai-editor-delete-desc": "Adds PageACL-controlled deletion with tagged delete logs and deleted-content access for archived page editors.",
+	"isekaieditordelete": "Delete page",
+	"isekai-editor-delete-special-title": "Delete page: $1",
+	"isekai-editor-delete-toolbox-editor-delete": "Delete",
+	"isekai-editor-delete-toolbox-delete": "Delete",
+	"isekai-editor-delete-confirm": "Delete this page.",
+	"isekai-editor-delete-editor-history-notice": "Users who have participated in editing can still view the page history content.",
+	"isekai-editor-delete-reason": "Reason",
+	"isekai-editor-delete-submit": "Delete page",
+	"isekai-editor-delete-cancel": "Cancel",
+	"isekai-editor-delete-no-target": "No page was specified.",
+	"isekai-editor-delete-invalid-target": "The specified page title is invalid.",
+	"isekai-editor-delete-missing-page": "The page does not exist.",
+	"isekai-editor-delete-permission-denied": "You do not have delete permission for this page.",
+	"isekai-editor-delete-page-changed": "The page changed after the deletion form was loaded. Please review and submit again.",
+	"isekai-editor-delete-action-complete": "The page has been deleted.",
+	"isekai-editor-delete-error-missing-lpacl": "IsekaiLitePageACL is required by IsekaiEditorDelete.",
+	"isekai-editor-delete-permission-delete": "Delete",
+	"isekai-editor-delete-permission-delete-help": "Allows deleting the page.",
+	"isekai-editor-delete-permission-delete-subpage": "Delete subpages",
+	"isekai-editor-delete-permission-delete-subpage-help": "Allows deleting subpages under this page.",
+	"tag-editor-delete": "Delete by editor",
+	"tag-editor-delete-description": "Deletion made through the Isekai delete workflow."
+}
